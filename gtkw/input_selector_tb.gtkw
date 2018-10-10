@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Oct 10 10:19:26 2018
+[*]
+[dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/input_selector_tb.vcd"
+[dumpfile_mtime] "Wed Oct 10 10:18:43 2018"
+[dumpfile_size] 5133
+[savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/input_selector_tb.gtkw"
+[timestart] 0
+[size] 1621 1001
+[pos] -1 -1
+*-15.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] input_selector_tb.
+[sst_width] 217
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@200
+-DATOS
+@22
+input_selector_tb.input_selector1.wData[63:0]
+input_selector_tb.input_selector1.wDataRegs[255:0]
+@200
+-SELECCION
+@24
+input_selector_tb.input_selector1.wSelecMain[3:0]
+input_selector_tb.input_selector1.wSelecRegs[5:0]
+@28
+input_selector_tb.input_selector1.wBusy
+input_selector_tb.input_selector1.wSelecOrigin
+@200
+-SALIDA
+@22
+input_selector_tb.input_selector1.r[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
