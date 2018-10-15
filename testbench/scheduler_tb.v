@@ -9,36 +9,38 @@ module scheduler_tb;
     $dumpvars(0, scheduler_tb);
   end
 
+  parameter DATA_WIDTH = 16;
+  parameter N_INPUTS = 4;
+
   reg clk, rst;
-  reg [15:0] r0, r1, r2, r3;
-  wire [15:0] data_out;
+  reg [N_INPUTS*DATA_WIDTH-1:0] r_in;
+  wire [DATA_WIDTH-1:0] data_out;
 
   always #1 clk = ~clk;
 
-  scheduler scheduler1 (
+  scheduler #(DATA_WIDTH, N_INPUTS) scheduler (
     .clk(clk),
     .rst(rst),
-    .r0(r0), .r1(r1), .r2(r2), .r3(r3),
+    .r_in(r_in),
     .data_out(data_out)
   );
 
   initial begin
     rst <= 0;
     clk <= 0;
-    r0 <= 16'haaaa;
-    r1 <= 16'hbbbb;
-    r2 <= 16'hcccc;
-    r3 <= 16'hdddd;
 
-    # 20
+    r_in <= 64'haaaa_bbbb_cccc_dddd;
+
+    # 5
     @(posedge clk);
     rst <= 1;
 
-    # 100
+    # 10
     @(posedge clk);
     rst <= 0;
 
-    # 100 $finish;
+    # 40
+    $finish;
   end
 
 endmodule
