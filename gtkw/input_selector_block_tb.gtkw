@@ -1,0 +1,616 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Mon Oct 15 05:53:45 2018
+[*]
+[dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/input_selector_block_tb.vcd"
+[dumpfile_mtime] "Mon Oct 15 05:52:55 2018"
+[dumpfile_size] 70709
+[savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/input_selector_block_tb.gtkw"
+[timestart] 4
+[size] 1621 1001
+[pos] -1 -1
+*0.000000 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[0].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[1].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[2].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[3].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[0].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[1].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[2].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[3].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[0].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[1].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[2].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[3].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[0].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[1].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[2].
+[treeopen] input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[3].
+[sst_width] 264
+[signals_width] 256
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@c00022
+[color] 3
+input_selector_block_tb.wSelec[175:0]
+@28
+(0)input_selector_block_tb.wSelec[175:0]
+(1)input_selector_block_tb.wSelec[175:0]
+(2)input_selector_block_tb.wSelec[175:0]
+(3)input_selector_block_tb.wSelec[175:0]
+(4)input_selector_block_tb.wSelec[175:0]
+(5)input_selector_block_tb.wSelec[175:0]
+(6)input_selector_block_tb.wSelec[175:0]
+(7)input_selector_block_tb.wSelec[175:0]
+(8)input_selector_block_tb.wSelec[175:0]
+(9)input_selector_block_tb.wSelec[175:0]
+(10)input_selector_block_tb.wSelec[175:0]
+(11)input_selector_block_tb.wSelec[175:0]
+(12)input_selector_block_tb.wSelec[175:0]
+(13)input_selector_block_tb.wSelec[175:0]
+(14)input_selector_block_tb.wSelec[175:0]
+(15)input_selector_block_tb.wSelec[175:0]
+(16)input_selector_block_tb.wSelec[175:0]
+(17)input_selector_block_tb.wSelec[175:0]
+(18)input_selector_block_tb.wSelec[175:0]
+(19)input_selector_block_tb.wSelec[175:0]
+(20)input_selector_block_tb.wSelec[175:0]
+(21)input_selector_block_tb.wSelec[175:0]
+(22)input_selector_block_tb.wSelec[175:0]
+(23)input_selector_block_tb.wSelec[175:0]
+(24)input_selector_block_tb.wSelec[175:0]
+(25)input_selector_block_tb.wSelec[175:0]
+(26)input_selector_block_tb.wSelec[175:0]
+(27)input_selector_block_tb.wSelec[175:0]
+(28)input_selector_block_tb.wSelec[175:0]
+(29)input_selector_block_tb.wSelec[175:0]
+(30)input_selector_block_tb.wSelec[175:0]
+(31)input_selector_block_tb.wSelec[175:0]
+(32)input_selector_block_tb.wSelec[175:0]
+(33)input_selector_block_tb.wSelec[175:0]
+(34)input_selector_block_tb.wSelec[175:0]
+(35)input_selector_block_tb.wSelec[175:0]
+(36)input_selector_block_tb.wSelec[175:0]
+(37)input_selector_block_tb.wSelec[175:0]
+(38)input_selector_block_tb.wSelec[175:0]
+(39)input_selector_block_tb.wSelec[175:0]
+(40)input_selector_block_tb.wSelec[175:0]
+(41)input_selector_block_tb.wSelec[175:0]
+(42)input_selector_block_tb.wSelec[175:0]
+(43)input_selector_block_tb.wSelec[175:0]
+(44)input_selector_block_tb.wSelec[175:0]
+(45)input_selector_block_tb.wSelec[175:0]
+(46)input_selector_block_tb.wSelec[175:0]
+(47)input_selector_block_tb.wSelec[175:0]
+(48)input_selector_block_tb.wSelec[175:0]
+(49)input_selector_block_tb.wSelec[175:0]
+(50)input_selector_block_tb.wSelec[175:0]
+(51)input_selector_block_tb.wSelec[175:0]
+(52)input_selector_block_tb.wSelec[175:0]
+(53)input_selector_block_tb.wSelec[175:0]
+(54)input_selector_block_tb.wSelec[175:0]
+(55)input_selector_block_tb.wSelec[175:0]
+(56)input_selector_block_tb.wSelec[175:0]
+(57)input_selector_block_tb.wSelec[175:0]
+(58)input_selector_block_tb.wSelec[175:0]
+(59)input_selector_block_tb.wSelec[175:0]
+(60)input_selector_block_tb.wSelec[175:0]
+(61)input_selector_block_tb.wSelec[175:0]
+(62)input_selector_block_tb.wSelec[175:0]
+(63)input_selector_block_tb.wSelec[175:0]
+(64)input_selector_block_tb.wSelec[175:0]
+(65)input_selector_block_tb.wSelec[175:0]
+(66)input_selector_block_tb.wSelec[175:0]
+(67)input_selector_block_tb.wSelec[175:0]
+(68)input_selector_block_tb.wSelec[175:0]
+(69)input_selector_block_tb.wSelec[175:0]
+(70)input_selector_block_tb.wSelec[175:0]
+(71)input_selector_block_tb.wSelec[175:0]
+(72)input_selector_block_tb.wSelec[175:0]
+(73)input_selector_block_tb.wSelec[175:0]
+(74)input_selector_block_tb.wSelec[175:0]
+(75)input_selector_block_tb.wSelec[175:0]
+(76)input_selector_block_tb.wSelec[175:0]
+(77)input_selector_block_tb.wSelec[175:0]
+(78)input_selector_block_tb.wSelec[175:0]
+(79)input_selector_block_tb.wSelec[175:0]
+(80)input_selector_block_tb.wSelec[175:0]
+(81)input_selector_block_tb.wSelec[175:0]
+(82)input_selector_block_tb.wSelec[175:0]
+(83)input_selector_block_tb.wSelec[175:0]
+(84)input_selector_block_tb.wSelec[175:0]
+(85)input_selector_block_tb.wSelec[175:0]
+(86)input_selector_block_tb.wSelec[175:0]
+(87)input_selector_block_tb.wSelec[175:0]
+(88)input_selector_block_tb.wSelec[175:0]
+(89)input_selector_block_tb.wSelec[175:0]
+(90)input_selector_block_tb.wSelec[175:0]
+(91)input_selector_block_tb.wSelec[175:0]
+(92)input_selector_block_tb.wSelec[175:0]
+(93)input_selector_block_tb.wSelec[175:0]
+(94)input_selector_block_tb.wSelec[175:0]
+(95)input_selector_block_tb.wSelec[175:0]
+(96)input_selector_block_tb.wSelec[175:0]
+(97)input_selector_block_tb.wSelec[175:0]
+(98)input_selector_block_tb.wSelec[175:0]
+(99)input_selector_block_tb.wSelec[175:0]
+(100)input_selector_block_tb.wSelec[175:0]
+(101)input_selector_block_tb.wSelec[175:0]
+(102)input_selector_block_tb.wSelec[175:0]
+(103)input_selector_block_tb.wSelec[175:0]
+(104)input_selector_block_tb.wSelec[175:0]
+(105)input_selector_block_tb.wSelec[175:0]
+(106)input_selector_block_tb.wSelec[175:0]
+(107)input_selector_block_tb.wSelec[175:0]
+(108)input_selector_block_tb.wSelec[175:0]
+(109)input_selector_block_tb.wSelec[175:0]
+(110)input_selector_block_tb.wSelec[175:0]
+(111)input_selector_block_tb.wSelec[175:0]
+(112)input_selector_block_tb.wSelec[175:0]
+(113)input_selector_block_tb.wSelec[175:0]
+(114)input_selector_block_tb.wSelec[175:0]
+(115)input_selector_block_tb.wSelec[175:0]
+(116)input_selector_block_tb.wSelec[175:0]
+(117)input_selector_block_tb.wSelec[175:0]
+(118)input_selector_block_tb.wSelec[175:0]
+(119)input_selector_block_tb.wSelec[175:0]
+(120)input_selector_block_tb.wSelec[175:0]
+(121)input_selector_block_tb.wSelec[175:0]
+(122)input_selector_block_tb.wSelec[175:0]
+(123)input_selector_block_tb.wSelec[175:0]
+(124)input_selector_block_tb.wSelec[175:0]
+(125)input_selector_block_tb.wSelec[175:0]
+(126)input_selector_block_tb.wSelec[175:0]
+(127)input_selector_block_tb.wSelec[175:0]
+(128)input_selector_block_tb.wSelec[175:0]
+(129)input_selector_block_tb.wSelec[175:0]
+(130)input_selector_block_tb.wSelec[175:0]
+(131)input_selector_block_tb.wSelec[175:0]
+(132)input_selector_block_tb.wSelec[175:0]
+(133)input_selector_block_tb.wSelec[175:0]
+(134)input_selector_block_tb.wSelec[175:0]
+(135)input_selector_block_tb.wSelec[175:0]
+(136)input_selector_block_tb.wSelec[175:0]
+(137)input_selector_block_tb.wSelec[175:0]
+(138)input_selector_block_tb.wSelec[175:0]
+(139)input_selector_block_tb.wSelec[175:0]
+(140)input_selector_block_tb.wSelec[175:0]
+(141)input_selector_block_tb.wSelec[175:0]
+(142)input_selector_block_tb.wSelec[175:0]
+(143)input_selector_block_tb.wSelec[175:0]
+(144)input_selector_block_tb.wSelec[175:0]
+(145)input_selector_block_tb.wSelec[175:0]
+(146)input_selector_block_tb.wSelec[175:0]
+(147)input_selector_block_tb.wSelec[175:0]
+(148)input_selector_block_tb.wSelec[175:0]
+(149)input_selector_block_tb.wSelec[175:0]
+(150)input_selector_block_tb.wSelec[175:0]
+(151)input_selector_block_tb.wSelec[175:0]
+(152)input_selector_block_tb.wSelec[175:0]
+(153)input_selector_block_tb.wSelec[175:0]
+(154)input_selector_block_tb.wSelec[175:0]
+(155)input_selector_block_tb.wSelec[175:0]
+(156)input_selector_block_tb.wSelec[175:0]
+(157)input_selector_block_tb.wSelec[175:0]
+(158)input_selector_block_tb.wSelec[175:0]
+(159)input_selector_block_tb.wSelec[175:0]
+(160)input_selector_block_tb.wSelec[175:0]
+(161)input_selector_block_tb.wSelec[175:0]
+(162)input_selector_block_tb.wSelec[175:0]
+(163)input_selector_block_tb.wSelec[175:0]
+(164)input_selector_block_tb.wSelec[175:0]
+(165)input_selector_block_tb.wSelec[175:0]
+(166)input_selector_block_tb.wSelec[175:0]
+(167)input_selector_block_tb.wSelec[175:0]
+(168)input_selector_block_tb.wSelec[175:0]
+(169)input_selector_block_tb.wSelec[175:0]
+(170)input_selector_block_tb.wSelec[175:0]
+(171)input_selector_block_tb.wSelec[175:0]
+(172)input_selector_block_tb.wSelec[175:0]
+(173)input_selector_block_tb.wSelec[175:0]
+(174)input_selector_block_tb.wSelec[175:0]
+(175)input_selector_block_tb.wSelec[175:0]
+@1401200
+-group_end
+@22
+[color] 3
+input_selector_block_tb.wSelecOrigin[15:0]
+[color] 3
+input_selector_block_tb.wSelecMainFlat[63:0]
+@28
+[color] 3
+input_selector_block_tb.wSelecRegsFlat[95:0]
+@200
+-input_selector_block
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.wBusy
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.wData[63:0]
+[color] 3
+input_selector_block_tb.input_selector_block.wRegs[255:0]
+@c00022
+[color] 3
+input_selector_block_tb.input_selector_block.wSelec[175:0]
+@28
+(0)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(1)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(2)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(3)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(4)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(5)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(6)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(7)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(8)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(9)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(10)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(11)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(12)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(13)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(14)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(15)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(16)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(17)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(18)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(19)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(20)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(21)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(22)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(23)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(24)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(25)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(26)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(27)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(28)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(29)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(30)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(31)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(32)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(33)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(34)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(35)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(36)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(37)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(38)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(39)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(40)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(41)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(42)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(43)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(44)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(45)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(46)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(47)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(48)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(49)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(50)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(51)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(52)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(53)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(54)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(55)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(56)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(57)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(58)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(59)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(60)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(61)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(62)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(63)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(64)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(65)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(66)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(67)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(68)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(69)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(70)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(71)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(72)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(73)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(74)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(75)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(76)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(77)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(78)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(79)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(80)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(81)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(82)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(83)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(84)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(85)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(86)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(87)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(88)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(89)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(90)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(91)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(92)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(93)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(94)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(95)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(96)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(97)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(98)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(99)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(100)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(101)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(102)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(103)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(104)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(105)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(106)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(107)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(108)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(109)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(110)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(111)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(112)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(113)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(114)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(115)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(116)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(117)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(118)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(119)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(120)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(121)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(122)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(123)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(124)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(125)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(126)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(127)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(128)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(129)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(130)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(131)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(132)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(133)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(134)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(135)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(136)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(137)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(138)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(139)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(140)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(141)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(142)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(143)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(144)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(145)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(146)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(147)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(148)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(149)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(150)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(151)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(152)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(153)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(154)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(155)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(156)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(157)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(158)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(159)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(160)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(161)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(162)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(163)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(164)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(165)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(166)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(167)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(168)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(169)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(170)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(171)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(172)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(173)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(174)input_selector_block_tb.input_selector_block.wSelec[175:0]
+(175)input_selector_block_tb.input_selector_block.wSelec[175:0]
+@1401200
+-group_end
+@22
+[color] 4
+input_selector_block_tb.input_selector_block.r0[15:0]
+[color] 4
+input_selector_block_tb.input_selector_block.r1[15:0]
+[color] 4
+input_selector_block_tb.input_selector_block.r2[15:0]
+[color] 4
+input_selector_block_tb.input_selector_block.r3[15:0]
+@200
+-input_selector_0_0
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[0].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[0].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[0].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[0].input_selector.r[3:0]
+@200
+-input_selector_0_1
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[1].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[1].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[1].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[1].input_selector.r[3:0]
+@200
+-input_selector_0_2
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[2].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[2].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[2].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[2].input_selector.r[3:0]
+@201
+-input_selector_0_3
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[3].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[3].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[3].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[0].input_selector_j[3].input_selector.r[3:0]
+@200
+-input_selector_1_0
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[0].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[0].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[0].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[0].input_selector.r[3:0]
+@200
+-input_selector_1_1
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[1].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[1].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[1].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[1].input_selector.r[3:0]
+@200
+-input_selector_1_2
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[2].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[2].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[2].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[2].input_selector.r[3:0]
+@200
+-input_selector_1_3
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[3].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[3].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[3].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[1].input_selector_j[3].input_selector.r[3:0]
+@200
+-input_selector_2_0
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[0].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[0].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[0].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[0].input_selector.r[3:0]
+@200
+-input_selector_2_1
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[1].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[1].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[1].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[1].input_selector.r[3:0]
+@200
+-input_selector_2_2
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[2].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[2].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[2].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[2].input_selector.r[3:0]
+@200
+-input_selector_2_3
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[3].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[3].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[3].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[2].input_selector_j[3].input_selector.r[3:0]
+@200
+-input_selector_3_0
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[0].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[0].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[0].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[0].input_selector.r[3:0]
+@200
+-input_selector_3_1
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[1].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[1].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[1].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[1].input_selector.r[3:0]
+@200
+-input_selector_3_2
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[2].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[2].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[2].input_selector.wSelecRegs[5:0]
+[color] 4
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[2].input_selector.r[3:0]
+@200
+-input_selector_3_3
+@28
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[3].input_selector.wSelecOrigin
+@22
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[3].input_selector.wSelecMain[3:0]
+[color] 3
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[3].input_selector.wSelecRegs[5:0]
+input_selector_block_tb.input_selector_block.input_selector_i[3].input_selector_j[3].input_selector.r[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

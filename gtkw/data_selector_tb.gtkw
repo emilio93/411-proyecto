@@ -1,0 +1,56 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Mon Oct 15 06:23:45 2018
+[*]
+[dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/data_selector_tb.vcd"
+[dumpfile_mtime] "Mon Oct 15 06:22:59 2018"
+[dumpfile_size] 90938
+[savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/data_selector_tb.gtkw"
+[timestart] 0
+[size] 1621 1001
+[pos] -1 -1
+*-14.000000 27000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] data_selector_tb.
+[treeopen] data_selector_tb.data_selector.
+[treeopen] data_selector_tb.data_selector.scheduler_block.
+[sst_width] 217
+[signals_width] 241
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+data_selector_tb.clk
+data_selector_tb.rst
+data_selector_tb.wBusy
+@22
+data_selector_tb.wData[63:0]
+data_selector_tb.data_out[15:0]
+@200
+-data_selector
+@22
+data_selector_tb.data_selector.wRegs[255:0]
+data_selector_tb.data_selector.wSelec[175:0]
+data_selector_tb.data_selector.scheduler_output[15:0]
+@200
+-input_selector_block
+@22
+data_selector_tb.data_selector.input_selector_block.wData[63:0]
+data_selector_tb.data_selector.input_selector_block.wRegs[255:0]
+data_selector_tb.data_selector.input_selector_block.wSelec[175:0]
+data_selector_tb.data_selector.input_selector_block.r0[15:0]
+data_selector_tb.data_selector.input_selector_block.r1[15:0]
+data_selector_tb.data_selector.input_selector_block.r2[15:0]
+data_selector_tb.data_selector.input_selector_block.r3[15:0]
+@200
+-scheduler_block
+@22
+data_selector_tb.data_selector.scheduler_block.r0[15:0]
+data_selector_tb.data_selector.scheduler_block.r1[15:0]
+data_selector_tb.data_selector.scheduler_block.r2[15:0]
+@23
+data_selector_tb.data_selector.scheduler_block.r3[15:0]
+@28
+data_selector_tb.data_selector.scheduler_block.scheduler.ctr[1:0]
+@22
+data_selector_tb.data_selector.scheduler_block.data_out[15:0]
+[pattern_trace] 1
+[pattern_trace] 0
