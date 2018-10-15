@@ -46,7 +46,7 @@ module scheduler #(
   genvar i;
   generate
     for (i = 0; i < N_INPUTS; i = i+1) begin
-      assign r[i] = r_in[(i+1)*DATA_WIDTH:i*DATA_WIDTH];
+      assign r[i] = r_in[(i+1)*DATA_WIDTH-1:i*DATA_WIDTH];
     end
   endgenerate
 

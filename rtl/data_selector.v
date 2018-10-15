@@ -21,7 +21,7 @@ module data_selector #(
 );
 
   reg [REGS_INPUTS*DATA_WIDTH-1:0] wRegs;
-  wire [DATA_WIDTH*SELECTOR_OUTPUTS_PER_BUS] r0, r1, r2, r3;
+  wire [DATA_WIDTH*SELECTOR_OUTPUTS_PER_BUS-1:0] r0, r1, r2, r3;
   wire [DATA_WIDTH*SELECTOR_OUTPUTS_PER_BUS-1:0] scheduler_output;
 
 
