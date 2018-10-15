@@ -1,7 +1,17 @@
 `ifndef input_selector_module
 `define input_selector_module
 
-module input_selector #(parameter DATA_WIDTH=4, parameter MAIN_INPUTS=16, parameter REGS_INPUTS=64) (
+/**
+ *  Bloque input_selector
+ *  El bloque input_selector se encarga de acomodar datos de dos
+ *  entradas distintas.
+ *
+ */
+module input_selector #(
+  parameter DATA_WIDTH = 4,
+  parameter MAIN_INPUTS = 16,
+  parameter REGS_INPUTS = 64
+) (
   input wBusy, wSelecOrigin,
   input [MAIN_INPUTS*DATA_WIDTH-1:0] wData,
   input [REGS_INPUTS*DATA_WIDTH-1:0] wDataRegs,
@@ -22,7 +32,9 @@ module input_selector #(parameter DATA_WIDTH=4, parameter MAIN_INPUTS=16, parame
     end
   endgenerate
 
-  assign r = (~wBusy & wSelecOrigin) ? chunksRegs[wSelecRegs] : chunksMain[wSelecMain];
+  assign r = (~wBusy & wSelecOrigin) ?
+             chunksRegs[wSelecRegs] :
+             chunksMain[wSelecMain];
 endmodule
 
 `endif
