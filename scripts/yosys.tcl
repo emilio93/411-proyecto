@@ -5,7 +5,7 @@ set vlogModuleName "$::env(VLOG_MODULE_NAME)"
 set vlogFileName   "$::env(VLOG_FILE_NAME)"
 set cellLib        osu018_stdcells
 
-yosys read_verilog $vlogFileName
+yosys read_verilog -sv $vlogFileName
 
 hierarchy -check -top $vlogModuleName
 # show -prefix pdfs/$vlogModuleName-original -colors 3 -viewer echo $vlogModuleName
