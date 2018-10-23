@@ -2,6 +2,12 @@
 
 `include "rtl/data_selector.v"
 
+`define SYNTH = 1
+`ifdef SYNTH
+`include "lib/osu018_stdcells.v"
+`include "build/data_selector-sintetizado.v"
+`endif
+
 module data_selector_tb;
   initial begin
     $display ("data_selector_tb");
@@ -23,7 +29,7 @@ module data_selector_tb;
   reg [31:0] wRegs0, wRegs1, wRegs2, wRegs3, wRegs4, wRegs5, wRegs6, wRegs7;
   reg [3:0] wSelecMain;
   reg [175:0] wSelec;
-  wire [15:0] data_out;
+  wire [15:0] data_out, data_outSynth;
 
   always #1 clk = ~clk;
 
@@ -50,6 +56,26 @@ module data_selector_tb;
     .wRegs7(wRegs7),
     .data_out(data_out)
   );
+
+`ifdef SYNTH
+  data_selectorSynth data_selectorSynth (
+    .clk(clk),
+    .rst(rst),
+    .wBusy(wBusy),
+    .wSelec(wSelec),
+    .wData(wData),
+    .wRegs0(wRegs0),
+    .wRegs1(wRegs1),
+    .wRegs2(wRegs2),
+    .wRegs3(wRegs3),
+    .wRegs4(wRegs4),
+    .wRegs5(wRegs5),
+    .wRegs6(wRegs6),
+    .wRegs7(wRegs7),
+    .data_out(data_outSynth)
+  );
+`endif
+
 
   initial begin
     clk <= 0;

@@ -1,56 +1,92 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Mon Oct 15 06:23:45 2018
+[*] Tue Oct 23 10:36:05 2018
 [*]
 [dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/data_selector_tb.vcd"
-[dumpfile_mtime] "Mon Oct 15 06:22:59 2018"
-[dumpfile_size] 90938
+[dumpfile_mtime] "Tue Oct 23 10:26:52 2018"
+[dumpfile_size] 2164461
 [savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/data_selector_tb.gtkw"
 [timestart] 0
 [size] 1621 1001
 [pos] -1 -1
-*-14.000000 27000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-14.000000 15160 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] data_selector_tb.
 [treeopen] data_selector_tb.data_selector.
-[treeopen] data_selector_tb.data_selector.scheduler_block.
 [sst_width] 217
-[signals_width] 241
+[signals_width] 252
 [sst_expanded] 1
 [sst_vpaned_height] 296
 @28
 data_selector_tb.clk
 data_selector_tb.rst
 data_selector_tb.wBusy
-@22
-data_selector_tb.wData[63:0]
-data_selector_tb.data_out[15:0]
 @200
 -data_selector
 @22
+[color] 3
 data_selector_tb.data_selector.wRegs[255:0]
+[color] 3
+data_selector_tb.data_selector.wRegs0[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs1[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs2[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs3[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs4[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs5[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs6[31:0]
+[color] 3
+data_selector_tb.data_selector.wRegs7[31:0]
+[color] 3
 data_selector_tb.data_selector.wSelec[175:0]
+[color] 4
+data_selector_tb.data_selector.data_out[15:0]
+[color] 4
 data_selector_tb.data_selector.scheduler_output[15:0]
+@200
+-data_selectorSynth
+@22
+[color] 4
+data_selector_tb.data_selectorSynth.data_out[15:0]
+[color] 4
+data_selector_tb.data_selectorSynth.scheduler_output[15:0]
 @200
 -input_selector_block
 @22
+[color] 3
 data_selector_tb.data_selector.input_selector_block.wData[63:0]
+[color] 3
 data_selector_tb.data_selector.input_selector_block.wRegs[255:0]
+[color] 3
 data_selector_tb.data_selector.input_selector_block.wSelec[175:0]
+[color] 4
 data_selector_tb.data_selector.input_selector_block.r0[15:0]
+[color] 4
 data_selector_tb.data_selector.input_selector_block.r1[15:0]
+[color] 4
 data_selector_tb.data_selector.input_selector_block.r2[15:0]
+[color] 4
 data_selector_tb.data_selector.input_selector_block.r3[15:0]
 @200
 -scheduler_block
 @22
+[color] 3
 data_selector_tb.data_selector.scheduler_block.r0[15:0]
+[color] 3
 data_selector_tb.data_selector.scheduler_block.r1[15:0]
+[color] 3
 data_selector_tb.data_selector.scheduler_block.r2[15:0]
-@23
+[color] 3
 data_selector_tb.data_selector.scheduler_block.r3[15:0]
 @28
+[color] 6
 data_selector_tb.data_selector.scheduler_block.scheduler.ctr[1:0]
 @22
+[color] 4
 data_selector_tb.data_selector.scheduler_block.data_out[15:0]
 [pattern_trace] 1
 [pattern_trace] 0

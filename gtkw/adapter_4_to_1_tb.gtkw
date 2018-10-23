@@ -1,18 +1,18 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Sun Oct 14 21:15:54 2018
+[*] Tue Oct 23 09:56:50 2018
 [*]
 [dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/adapter_4_to_1_tb.vcd"
-[dumpfile_mtime] "Sun Oct 14 21:14:41 2018"
-[dumpfile_size] 1319
+[dumpfile_mtime] "Tue Oct 23 09:55:46 2018"
+[dumpfile_size] 2176
 [savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/adapter_4_to_1_tb.gtkw"
 [timestart] 0
 [size] 1621 1001
 [pos] -1 -1
-*-13.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-13.000000 10000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] adapter_4_to_1_tb.
 [sst_width] 217
-[signals_width] 229
+[signals_width] 180
 [sst_expanded] 1
 [sst_vpaned_height] 296
 @22
@@ -26,5 +26,8 @@ adapter_4_to_1_tb.adapter_4_to_1.r2[15:0]
 adapter_4_to_1_tb.adapter_4_to_1.r3[15:0]
 [color] 4
 adapter_4_to_1_tb.adapter_4_to_1.r[63:0]
+adapter_4_to_1_tb.rSynth[63:0]
+@28
+adapter_4_to_1_tb.errorR
 [pattern_trace] 1
 [pattern_trace] 0

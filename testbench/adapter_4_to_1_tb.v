@@ -2,6 +2,12 @@
 
 `include "rtl/adapter_4_to_1.v"
 
+`define SYNTH = 1
+`ifdef SYNTH
+`include "lib/osu018_stdcells.v"
+`include "build/adapter_4_to_1-sintetizado.v"
+`endif
+
 module adapter_4_to_1_tb;
   initial begin
     $display ("adapter_4_to_1_tb");
@@ -13,7 +19,13 @@ module adapter_4_to_1_tb;
   parameter N_INPUTS = 4;
 
   reg [DATA_WIDTH-1:0] r0, r1, r2, r3;
+
   wire [N_INPUTS*DATA_WIDTH-1:0] r;
+  wire [N_INPUTS*DATA_WIDTH-1:0] rSynth;
+
+  wire errorR;
+
+  assign errorR = r != rSynth;
 
   adapter_4_to_1 #(DATA_WIDTH, N_INPUTS) adapter_4_to_1 (
     .r0(r0),
@@ -22,6 +34,16 @@ module adapter_4_to_1_tb;
     .r3(r3),
     .r(r)
   );
+
+`ifdef SYNTH
+  adapter_4_to_1Synth adapter_4_to_1Synth (
+    .r0(r0),
+    .r1(r1),
+    .r2(r2),
+    .r3(r3),
+    .r(rSynth)
+  );
+`endif
 
   initial begin
 
