@@ -3,6 +3,17 @@
 `ifndef input_selector_block_module
 `define input_selector_block_module
 
+/**
+ *  El bloque input_selector_block se encarga de instanciar la cantidad de
+ *  bloques input_selector necesarios para seleccionar OUTPUTS señales de
+ *  salida de OUTPUTS_PER_BUS datos de tamaño DATA_WIDTH. Se cuenta con las
+ *  dos entradas de datos enlazadas directamente con los bloques input_selector
+ *  sin ninguna distinción, lo mismo sucede con la señal de ocupado wBusy.
+ *
+ *  Se obtienen las distintas señales de selección que se le asignan a cada
+ *  bloque inut_selector.
+ *
+ */
 module input_selector_block #(
   parameter DATA_WIDTH = 4,
   parameter MAIN_INPUTS = 16,

@@ -40,9 +40,15 @@ module scheduler #(
   output reg [DATA_WIDTH-1:0] data_out
 );
 
+  // El contador itera a través de las N_INPUT entradas.
   reg [$clog2(N_INPUTS)-1:0] ctr;
+
+  // Un arreglo de las entradas.
   wire [DATA_WIDTH-1:0] r [N_INPUTS-1:0];
 
+  // Se obtiene la entrada en un arreglo de N_INPUT elementos de tamaño
+  // DATA_WIDTH, esto facilita la selección del bus de datos de salida dado que
+  // se trabaja con un arreglo de buses de datos.
   genvar i;
   generate
     for (i = 0; i < N_INPUTS; i = i+1) begin
@@ -50,10 +56,16 @@ module scheduler #(
     end
   endgenerate
 
+
   always @(posedge clk) begin
+    // Con la señal de rst en alto se reinicia el contador.
+    // El dato de salida corresponde a la primer entrada.
     if (rst) begin
       data_out <= r[0];
       ctr <= 0;
+    // En funcionamiento normal, cada ciclo de reloj el contador aumenta.
+    // El dato de salida corresponde a r[ctr], seleccionando una entrada
+    // distinta en cada ciclo de reloj.
     end else begin
       ctr <= ctr + 1;
       data_out <= r[ctr];

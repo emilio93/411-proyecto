@@ -58,6 +58,26 @@ else
   echo "\`ifndef adapter_${n}_to_1_module
 \`define adapter_${n}_to_1_module
 
+/**
+ *  Bloque adapter_${n}_to_1
+ *
+ *  El bloque se encarga de unir ${n} buses de datos de entrada en un solo bus de
+ *  salida.
+ *
+ *  Este bloque es generado por un script que permite variar la cantidad de
+ *  entradas y el tamaño base de los datos.
+ *
+ *  Parámetros
+ *    DATA_WIDTH : tamaño base de los datos.
+ *    N_INPUTS : cantidad de entradas del módulo.
+ *
+ *  Puertos de Entrada
+ *    ${inputs} : señales de entrada de tamaño DATA_WIDTH.
+ *
+ *  Puertos de Salida
+ *    r : señal de salida de tamaño DATA_WIDTH*N_INPUTS
+ */
+
 module adapter_${n}_to_1 #(
   parameter DATA_WIDTH=${d},
   parameter N_INPUTS=${n}
