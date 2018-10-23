@@ -1,7 +1,18 @@
 # Proyecto IE411
 
 ```bash
-# correr script automatizado
+# correr make help para instrucciones de uso
+make help
+
+# sintetizar, compilar y correr todos los bloques y pruebas.
+make
+
+# abrir gtkwave para ver la prueba data_selector
+make view data_selector
+
+# otra alternativa.
+
+# correr script automatizado, solo compartamiento lógico, no realiza síntesis.
 ./scripts/build.sh
 
 # abrir en GtkWave
