@@ -1,10 +1,9 @@
 `timescale 1ns/1ps
 
+`include "testbench/includes.v"
 `include "rtl/data_selector.v"
 
-`define SYNTH = 1
 `ifdef SYNTH
-`include "lib/osu018_stdcells.v"
 `include "build/data_selector-sintetizado.v"
 `endif
 

@@ -1,10 +1,9 @@
 `timescale 1ns/1ps
 
+`include "testbench/includes.v"
 `include "rtl/adapter_4_to_1.v"
 
-`define SYNTH = 1
 `ifdef SYNTH
-`include "lib/osu018_stdcells.v"
 `include "build/adapter_4_to_1-sintetizado.v"
 `endif
 
