@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 
-DIRS  = ./build ./pdfs ./out
+DIRS  = ./build ./pdfs ./out ./tests
 
 CC        = iverilog
 CCFLAGS   = -Ttyp -g specify -g2005-sv -DCOMPILACION
@@ -224,8 +224,8 @@ clean:
 	rm -r ./build
 	rm -r ./pdfs
 	rm -r ./out
+	rm -r ./tests
 	rm -f ./*.dot
-	rm -f tests/*.vcd
 
 help:
 	@echo "*****************"
