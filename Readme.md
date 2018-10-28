@@ -3,15 +3,28 @@
 ## Correr pruebas
 
 ```bash
+# comprobar que ejecutables necesarios para correr make
+# se encuentren en $PATH
+which sh
+which bash
+which iverilog
+which vvp
+which yosys
+which gtkwave
+which sed
+which dot
+
 # correr make help para instrucciones de uso
 make help
-# make help | head -31 # instrucciones generales
-# make help | head -43 | tail -12 # make all
-# make help | head -55 | tail -11 # make synth
-# make help | head -72 | tail -16 # make compile
-# make help | head -85 | tail -12 # make run
-# make help | head -96 | tail -10 # make view
-# make help | head -106 | tail -9 # make clean
+
+# o bien instrucciones individuales para cada regla del make
+# make helpMain
+# make helpAll
+# make helpSynth
+# make helpCompile
+# make helpRun
+# make helpView
+# make helpClean
 
 # sintetizar, compilar y correr todos los bloques y pruebas.
 make
