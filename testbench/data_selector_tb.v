@@ -23,14 +23,35 @@ module data_selector_tb;
 
   reg clk, rst;
   reg wBusy;
-  reg wSelecOrigin;
   reg [63:0] wData;
   reg [31:0] wRegs0, wRegs1, wRegs2, wRegs3, wRegs4, wRegs5, wRegs6, wRegs7;
-  reg [3:0] wSelecMain;
+  reg [3:0] wSelecMain [15:0];
+  reg [5:0] wSelecRegs [15:0];
+  reg wSelecOrigin [15:0];
   reg [175:0] wSelec;
   wire [15:0] data_out, data_outSynth;
+  wire errorData_out;
 
-  always #1 clk = ~clk;
+  assign errorData_out = data_out != data_outSynth;
+
+  assign wSelec[10:0] = {wSelecRegs[0], wSelecMain[0], wSelecOrigin[0]};
+  assign wSelec[21:11] = {wSelecRegs[1], wSelecMain[1], wSelecOrigin[1]};
+  assign wSelec[32:22] = {wSelecRegs[2], wSelecMain[2], wSelecOrigin[2]};
+  assign wSelec[43:33] = {wSelecRegs[3], wSelecMain[3], wSelecOrigin[3]};
+  assign wSelec[54:44] = {wSelecRegs[4], wSelecMain[4], wSelecOrigin[4]};
+  assign wSelec[65:55] = {wSelecRegs[5], wSelecMain[5], wSelecOrigin[5]};
+  assign wSelec[76:66] = {wSelecRegs[6], wSelecMain[6], wSelecOrigin[6]};
+  assign wSelec[87:77] = {wSelecRegs[7], wSelecMain[7], wSelecOrigin[7]};
+  assign wSelec[98:88] = {wSelecRegs[8], wSelecMain[8], wSelecOrigin[8]};
+  assign wSelec[109:99] = {wSelecRegs[9], wSelecMain[9], wSelecOrigin[9]};
+  assign wSelec[120:110] = {wSelecRegs[10], wSelecMain[10], wSelecOrigin[10]};
+  assign wSelec[131:121] = {wSelecRegs[11], wSelecMain[11], wSelecOrigin[11]};
+  assign wSelec[142:132] = {wSelecRegs[12], wSelecMain[12], wSelecOrigin[12]};
+  assign wSelec[153:143] = {wSelecRegs[13], wSelecMain[13], wSelecOrigin[13]};
+  assign wSelec[164:154] = {wSelecRegs[14], wSelecMain[14], wSelecOrigin[14]};
+  assign wSelec[175:165] = {wSelecRegs[15], wSelecMain[15], wSelecOrigin[15]};
+
+  always #0.2 clk = ~clk;
 
   data_selector #(
   DATA_WIDTH,
@@ -84,32 +105,66 @@ module data_selector_tb;
     wData <= 64'h0123456789abcdef;
     {wRegs0, wRegs1, wRegs2, wRegs3, wRegs4, wRegs5, wRegs6, wRegs7} <= 256'h6789abcd_f0123456_789abcde_f0123456_789abcde_f0123456_789abcde_f6012345;
 
-    wSelec[10:0] <= {11'b001100_0000_0};
-    wSelec[21:11] <= {11'b100110_0001_0};
-    wSelec[32:22] <= {11'b100110_0010_0};
-    wSelec[43:33] <= {11'b100110_0011_0};
-    wSelec[54:44] <= {11'b100110_0100_0};
-    wSelec[65:55] <= {11'b100110_0101_0};
-    wSelec[76:66] <= {11'b100110_0110_0};
-    wSelec[87:77] <= {11'b100110_0111_0};
-    wSelec[98:88] <= {11'b100110_1000_0};
-    wSelec[109:99] <= {11'b100110_1001_0};
-    wSelec[120:110] <= {11'b100110_1010_0};
-    wSelec[131:121] <= {11'b100110_1011_0};
-    wSelec[142:132] <= {11'b100110_1100_0};
-    wSelec[153:143] <= {11'b100110_1101_0};
-    wSelec[164:154] <= {11'b100110_1110_0};
-    wSelec[175:165] <= {11'b100110_1111_0};
 
     # 10
     @(posedge clk);
     rst <= 1;
 
+  wSelecRegs[0] <= 6'h0;
+  wSelecRegs[1] <= 6'h1;
+  wSelecRegs[2] <= 6'h2;
+  wSelecRegs[3] <= 6'h3;
+  wSelecRegs[4] <= 6'h4;
+  wSelecRegs[5] <= 6'h5;
+  wSelecRegs[6] <= 6'h6;
+  wSelecRegs[7] <= 6'h7;
+  wSelecRegs[8] <= 6'h8;
+  wSelecRegs[9] <= 6'h9;
+  wSelecRegs[10] <= 6'ha;
+  wSelecRegs[11] <= 6'hb;
+  wSelecRegs[12] <= 6'hc;
+  wSelecRegs[13] <= 6'hd;
+  wSelecRegs[14] <= 6'he;
+  wSelecRegs[15] <= 6'hf;
+
+  wSelecMain[0] <= 4'h0;
+  wSelecMain[1] <= 4'h1;
+  wSelecMain[2] <= 4'h2;
+  wSelecMain[3] <= 4'h3;
+  wSelecMain[4] <= 4'h4;
+  wSelecMain[5] <= 4'h5;
+  wSelecMain[6] <= 4'h6;
+  wSelecMain[7] <= 4'h7;
+  wSelecMain[8] <= 4'h8;
+  wSelecMain[9] <= 4'h9;
+  wSelecMain[10] <= 4'ha;
+  wSelecMain[11] <= 4'hb;
+  wSelecMain[12] <= 4'hc;
+  wSelecMain[13] <= 4'hd;
+  wSelecMain[14] <= 4'he;
+  wSelecMain[15] <= 4'hf;
+
+  wSelecOrigin[0] <= 1'b0;
+  wSelecOrigin[1] <= 1'b0;
+  wSelecOrigin[2] <= 1'b0;
+  wSelecOrigin[3] <= 1'b0;
+  wSelecOrigin[4] <= 1'b0;
+  wSelecOrigin[5] <= 1'b0;
+  wSelecOrigin[6] <= 1'b0;
+  wSelecOrigin[7] <= 1'b0;
+  wSelecOrigin[8] <= 1'b0;
+  wSelecOrigin[9] <= 1'b0;
+  wSelecOrigin[10] <= 1'b0;
+  wSelecOrigin[11] <= 1'b0;
+  wSelecOrigin[12] <= 1'b0;
+  wSelecOrigin[13] <= 1'b0;
+  wSelecOrigin[14] <= 1'b0;
+  wSelecOrigin[15] <= 1'b0;
+
 
     # 10
     @(posedge clk);
     rst <= 0;
-
 
 
     # 300 $finish;

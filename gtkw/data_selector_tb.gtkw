@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Tue Oct 23 10:36:05 2018
+[*] Tue Oct 30 06:16:22 2018
 [*]
 [dumpfile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/tests/data_selector_tb.vcd"
-[dumpfile_mtime] "Tue Oct 23 10:26:52 2018"
-[dumpfile_size] 2164461
+[dumpfile_mtime] "Tue Oct 30 06:15:46 2018"
+[dumpfile_size] 2165389
 [savefile] "/home/emilio/Desktop/ucr/2018-ii/411/proyecto/gtkw/data_selector_tb.gtkw"
 [timestart] 0
 [size] 1621 1001
@@ -88,5 +88,9 @@ data_selector_tb.data_selector.scheduler_block.scheduler.ctr[1:0]
 @22
 [color] 4
 data_selector_tb.data_selector.scheduler_block.data_out[15:0]
+@200
+-ERROR
+@28
+data_selector_tb.errorData_out
 [pattern_trace] 1
 [pattern_trace] 0
