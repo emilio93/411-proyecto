@@ -10,6 +10,7 @@ SYNTH_OUT = ./build/
 PDF_OUT = ./pdfs/
 VVP_OUT = ./out/
 TEST_OUT = ./tests/
+GTKW_DIR = ./gtkw/
 SCRIPTS_SRC = ./scripts/
 YOSYS_SCRIPT = yosys.tcl
 LIB_SRC = ./lib/
@@ -17,7 +18,7 @@ LIB_SRC = ./lib/
 DIRS  = $(SYNTH_OUT) $(PDF_OUT) $(VVP_OUT) $(TEST_OUT)
 
 CC        = iverilog
-CCFLAGS   = -Ttyp -g specify -g2005-sv -DCOMPILACION
+CCFLAGS   = -Ttyp -g specify -g2005-sv -gassertions -DCOMPILACION
 CC1       = vvp
 CC2       = gtkwave
 CC3       = yosys -c
@@ -164,13 +165,12 @@ compilePre:
 	@echo "PREPROCESANDO..."
 	@echo "****************"
 #
-# cd $(TESTBENCH_SRC)
 # $(CC) -E -DKEY=10 \
 #   -o .$(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) \
 #   $(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS)
 # cd ..
 #
-	@$(foreach module,$(MAKECMDGOALS:compile%=%), $(foreach test, $(wildcard $(TESTBENCH_SRC)$(module)$(TESTBENCH_SUFFIX).v), echo "";echo cd $(TESTBENCH_SRC);echo $(CC) -E -DKEY=10 -o .$(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS);echo cd ..; cd $(TESTBENCH_SRC);$(CC) -E -DKEY=10 -o .$(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS);cd ..;))
+	@$(foreach module,$(MAKECMDGOALS:compile%=%), $(foreach test, $(wildcard $(TESTBENCH_SRC)$(module)$(TESTBENCH_SUFFIX).v), echo "";echo $(CC) -E -DKEY=10 -o $(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(test) $(CCFLAGS); $(CC) -E -DKEY=10 -o $(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(test) $(CCFLAGS);))
 compileComp:
 	@echo ""
 	@echo "*************"
@@ -182,7 +182,7 @@ compileComp:
 #   $(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS)
 # cd ..
 #
-	@$(foreach module,$(MAKECMDGOALS:compile%=%), $(foreach test, $(wildcard $(SYNTH_OUT)$(module)_test.pre.v), echo "";echo cd $(SYNTH_OUT);echo $(CC) -o $(subst $(SYNTH_OUT),,$(subst .pre.v,.o,$(test))) $(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS);echo cd ..; cd $(SYNTH_OUT);$(CC) -o $(subst $(SYNTH_OUT),,$(subst .pre.v,.o,$(test))) $(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS);cd ..;))
+	@$(foreach module,$(MAKECMDGOALS:compile%=%), $(foreach test, $(wildcard $(SYNTH_OUT)$(module)_tb.pre.v), echo "";echo $(CC) -o $(subst $(SYNTH_OUT),$(VVP_OUT),$(subst .pre.v,.o,$(test))) $(test) $(CCFLAGS); $(CC) -o $(subst $(SYNTH_OUT),$(VVP_OUT),$(subst .pre.v,.o,$(test))) $(test) $(CCFLAGS);))
 else
 compilePre:
 	@echo "***********************************"
@@ -192,12 +192,21 @@ compilePre:
 	@echo "****************"
 	@echo "PREPROCESANDO..."
 	@echo "****************"
+#
+# $(CC) -E -DKEY=10 \
+#   -o $(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) \
+#   $(TESTBENCH_SRC)$(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS)
+#
 	@$(foreach test,$(wildcard $(TESTBENCH_SRC)*.v), echo $(CC) -E -DKEY=10 -o $(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(TESTBENCH_SRC)$(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS); $(CC) -E -DKEY=10 -o $(SYNTH_OUT)$(subst $(TESTBENCH_SRC),,$(subst .v,.pre.v,$(test))) $(TESTBENCH_SRC)$(subst $(TESTBENCH_SRC),,$(test)) $(CCFLAGS);)
 compileComp:
 	@echo ""
 	@echo "*************"
 	@echo "COMPILANDO..."
 	@echo "*************"
+#
+# $(CC) -o out/$(subst $(SYNTH_OUT),,$(subst .pre.v,.o,$(test))) \
+#   $(SYNTH_OUT)$(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS)
+#
 	@$(foreach test,$(wildcard $(SYNTH_OUT)*.pre.v),echo $(CC) -o out/$(subst $(SYNTH_OUT),,$(subst .pre.v,.o,$(test))) $(SYNTH_OUT)$(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS); $(CC) -o out/$(subst $(SYNTH_OUT),,$(subst .pre.v,.o,$(test))) $(SYNTH_OUT)$(subst $(SYNTH_OUT),,$(test)) $(CCFLAGS);)
 endif
 compileEnd:
@@ -226,14 +235,14 @@ runRun:
 	@echo "************"
 	@echo "CORRIENDO..."
 	@echo "************"
-	@$(foreach module,$(MAKECMDGOALS:run%=%), $(foreach test, $(wildcard ./out/$(module)$(TESTBENCH_SUFFIX).o), echo "";echo $(CC1) $(test); $(CC1) $(test);echo "";))
+	@$(foreach module,$(MAKECMDGOALS:run%=%), $(foreach test, $(wildcard $(VVP_OUT)$(module)$(TESTBENCH_SUFFIX).o), echo "";echo $(CC1) $(test); $(CC1) $(test);echo "";))
 else
 runRun:
 	@echo "************"
 	@echo "CORRIENDO..."
 	@echo "************"
 	@echo ""
-	$(foreach test,$(wildcard out/*$(TESTBENCH_SUFFIX).o), $(CC1) $(test);)
+	$(foreach test,$(wildcard $(VVP_OUT)*$(TESTBENCH_SUFFIX).o), $(CC1) $(test);)
 endif
 runEnd:
 	$(error *** Fin de make run *** ***)
