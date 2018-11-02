@@ -47,6 +47,7 @@ dfflibmap -liberty $libSrc$cellLib.lib
 show -prefix $pdfOut$vlogModuleName-dff_seq -lib $libSrc$cellLib.v -colors 3 -viewer echo $vlogModuleName
 
 abc -liberty $libSrc$cellLib.lib
+stat -liberty $libSrc$cellLib.lib
 show -prefix $pdfOut$vlogModuleName-abc_comb -lib $libSrc$cellLib.v -colors 3 -viewer echo $vlogModuleName
 
 clean
