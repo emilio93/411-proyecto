@@ -22,7 +22,7 @@ CCFLAGS   = -Ttyp -g specify -g2005-sv -gassertions -DCOMPILACION
 CC1       = vvp
 CC2       = gtkwave
 CC3       = yosys -c
-CC3_FLAGS = -q
+CC3_FLAGS = -q -L yosys.log | tee --append yosys-output.log
 
 # Evita salidas de un comando
 NO_OUTPUT = > /dev/null
@@ -126,7 +126,7 @@ synthRename:
 	@echo "*** RENOMBRANDO MODULOS SINTETIZADOS ***"
 	@echo "****************************************"
 	@echo ""
-	@bash $(SCRIPTS_SRC)renameSynths.sh
+	@bash $(SCRIPTS_SRC)renameSynths.sh $(SYNTH_OUT)
 synthEnd:
 	$(error *** Fin de make synth *** ***)
 
@@ -284,6 +284,7 @@ clean:
 	rm -r ./out
 	rm -r ./tests
 	rm -f ./*.dot
+	rm -f ./*yosys*.log
 
 # ******************************************************************************
 # HELP

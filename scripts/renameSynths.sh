@@ -1,7 +1,7 @@
-folder=build
-# folder=$1
+folder=$1
 
-
+start_dir=$('pwd')
+echo $start_dir
 cd $folder
 for file in ./*-sintetizado.v; do
   moduleName=${file/.\//}
@@ -12,3 +12,5 @@ for file in ./*-sintetizado.v; do
   sed -i "s/module ${moduleName}/module  ${newModuleName}/" "${file}"
   echo ""
 done
+
+cd $start_dir
