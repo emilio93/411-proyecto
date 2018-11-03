@@ -53,13 +53,3 @@ gtkwave gtkw/scheduler_tb.gtkw
  * rtl : codigo verilog que implementa el diseño planteado.
  * scripts : scripts utilizados en el flujo del proyecto.
  * testbench : módulos de prueba para el diseño implementado.
-
- ## ¿Que Hace Falta?
-
- * Módulo de prueba para una configuración de señales en la cúal la selección de
- datos de la entrada principal siempre es la misma, esto es, la señal
- ```wSelecMain``` no cambia. El direccionamiento de los datos es de manera que
- los 16 primeros bits corresponden a la primer salida del bloque
- ```input_selector_block```, los siguientes 16 bits a la segunda salida, ...
- * Documentar bloques ```data_selector``` e ```input_selector_block```.
- *
