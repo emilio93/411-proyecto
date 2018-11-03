@@ -88,6 +88,7 @@ synthYosys:
 # $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS)
 #
 	@$(foreach module,$(MAKECMDGOALS:synth%=%),$(foreach vlog, $(wildcard $(RTL_SRC)$(module).v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(module).log | $(CC3_TEE); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(module).log ;echo "";))
+	cat $(LOG_OUT)*.log > yosys.log
 	@echo ""
 else
 synthYosys:
@@ -106,6 +107,7 @@ synthYosys:
 # $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS)
 #
 	@$(foreach vlog, $(wildcard $(RTL_SRC)*.v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(subst .v,,$(notdir $(vlog))).log | $(CC3_TEE); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(subst .v,,$(notdir $(vlog))).log | $(CC3_TEE) ;echo "";)
+	cat $(LOG_OUT)*.log > yosys.log
 	@echo ""
 endif
 # Convierte dots en pdfs y elimina los dots
