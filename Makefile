@@ -283,6 +283,7 @@ endif
 clean:
 	rm -r $(SYNTH_OUT)
 	rm -r $(PDF_OUT)
+	rm -r $(LOG_OUT)
 	rm -r ./out
 	rm -r ./tests
 	rm -f ./*.dot
