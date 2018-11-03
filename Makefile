@@ -8,6 +8,7 @@ RTL_SRC = ./rtl/
 TESTBENCH_SRC = ./testbench/
 SYNTH_OUT = ./build/
 PDF_OUT = ./pdfs/
+LOG_OUT = ./logs/
 VVP_OUT = ./out/
 TEST_OUT = ./tests/
 GTKW_DIR = ./gtkw/
@@ -15,14 +16,15 @@ SCRIPTS_SRC = ./scripts/
 YOSYS_SCRIPT = yosys.tcl
 LIB_SRC = ./lib/
 
-DIRS  = $(SYNTH_OUT) $(PDF_OUT) $(VVP_OUT) $(TEST_OUT)
+DIRS  = $(SYNTH_OUT) $(PDF_OUT) $(VVP_OUT) $(TEST_OUT) $(LOG_OUT)
 
 CC        = iverilog
 CCFLAGS   = -Ttyp -g specify -g2005-sv -gassertions -DCOMPILACION
 CC1       = vvp
 CC2       = gtkwave
 CC3       = yosys -c
-CC3_FLAGS = -q -L yosys.log | tee --append yosys-output.log
+CC3_FLAGS = -q -L
+CC3_TEE   = tee --append yosys-output.log
 
 # Evita salidas de un comando
 NO_OUTPUT = > /dev/null
@@ -85,7 +87,7 @@ synthYosys:
 # LIB_SRC=$(LIB_SRC) \
 # $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS)
 #
-	@$(foreach module,$(MAKECMDGOALS:synth%=%),$(foreach vlog, $(wildcard $(RTL_SRC)$(module).v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS);echo "";))
+	@$(foreach module,$(MAKECMDGOALS:synth%=%),$(foreach vlog, $(wildcard $(RTL_SRC)$(module).v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(module).log | $(CC3_TEE); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(module) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(module).log ;echo "";))
 	@echo ""
 else
 synthYosys:
@@ -103,7 +105,7 @@ synthYosys:
 # LIB_SRC=$(LIB_SRC) \
 # $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS)
 #
-	@$(foreach vlog, $(wildcard $(RTL_SRC)*.v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS);echo "";)
+	@$(foreach vlog, $(wildcard $(RTL_SRC)*.v), echo VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(subst .v,,$(notdir $(vlog))).log | $(CC3_TEE); VLOG_FILE_NAME=$(vlog) VLOG_MODULE_NAME=$(subst .v,,$(notdir $(vlog))) CUR_DIR=$(shell pwd) SYNTH_TECH=$(TECH) PDF_OUT=$(PDF_OUT) SYNTH_OUT=$(SYNTH_OUT) LIB_SRC=$(LIB_SRC) $(CC3) $(SCRIPTS_SRC)$(YOSYS_SCRIPT) $(CC3_FLAGS) $(LOG_OUT)yosys.$(subst .v,,$(notdir $(vlog))).log | $(CC3_TEE) ;echo "";)
 	@echo ""
 endif
 # Convierte dots en pdfs y elimina los dots

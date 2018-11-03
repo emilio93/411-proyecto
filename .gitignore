@@ -1,2 +1,6 @@
 *.o
 *.vcd
+logs
+build
+pdfs
+.log
