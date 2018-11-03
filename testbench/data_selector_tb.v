@@ -51,7 +51,7 @@ module data_selector_tb;
   assign wSelec[164:154] = {wSelecRegs[14], wSelecMain[14], wSelecOrigin[14]};
   assign wSelec[175:165] = {wSelecRegs[15], wSelecMain[15], wSelecOrigin[15]};
 
-  always #0.2 clk = ~clk;
+  always #1 clk = ~clk;
 
   data_selector #(
   DATA_WIDTH,
@@ -102,8 +102,8 @@ module data_selector_tb;
     rst <= 0;
     wBusy <= 0;
 
-    wData <= 64'h0123456789abcdef;
-    {wRegs0, wRegs1, wRegs2, wRegs3, wRegs4, wRegs5, wRegs6, wRegs7} <= 256'h6789abcd_f0123456_789abcde_f0123456_789abcde_f0123456_789abcde_f6012345;
+    wData <= 64'h0123_4567_89ab_cdef;
+    {wRegs0, wRegs1, wRegs2, wRegs3, wRegs4, wRegs5, wRegs6, wRegs7} <= 256'hffffabef_f0123456_789abcde_f0123456_789abcde_f0123456_789abcde_aaaabbbb;
 
 
     # 10
@@ -165,6 +165,49 @@ module data_selector_tb;
     # 10
     @(posedge clk);
     rst <= 0;
+
+  # 20
+    @(posedge clk);
+
+  wSelecOrigin[0] <= 1'b1;
+  wSelecOrigin[1] <= 1'b1;
+  wSelecOrigin[2] <= 1'b1;
+  wSelecOrigin[3] <= 1'b1;
+
+  # 20
+    @(posedge clk);
+    {wRegs7} <= 32'h23456789;
+  wData <= 64'hcacb_4567_89ab_cdef;
+
+  wSelecOrigin[0] <= 1'b0;
+  wSelecOrigin[1] <= 1'b0;
+  wSelecOrigin[2] <= 1'b0;
+  wSelecOrigin[3] <= 1'b0;
+
+  wSelecOrigin[4] <= 1'b1;
+  wSelecOrigin[5] <= 1'b1;
+  wSelecOrigin[6] <= 1'b1;
+  wSelecOrigin[7] <= 1'b1;
+
+  wSelecOrigin[8] <= 1'b1;
+  wSelecOrigin[9] <= 1'b1;
+  wSelecOrigin[10] <= 1'b1;
+  wSelecOrigin[11] <= 1'b1;
+  wSelecOrigin[12] <= 1'b1;
+  wSelecOrigin[13] <= 1'b1;
+  wSelecOrigin[14] <= 1'b1;
+  wSelecOrigin[15] <= 1'b1;
+
+  wSelecRegs[8] <= 6'd60;
+  wSelecRegs[9] <= 6'd61;
+  wSelecRegs[10] <= 6'd62;
+  wSelecRegs[11] <= 6'd63;
+
+  wSelecRegs[12] <= 6'd60;
+  wSelecRegs[13] <= 6'd61;
+  wSelecRegs[14] <= 6'd62;
+  wSelecRegs[15] <= 6'd63;
+
 
 
     # 300 $finish;
