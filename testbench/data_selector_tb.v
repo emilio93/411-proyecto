@@ -162,12 +162,12 @@ module data_selector_tb;
   wSelecOrigin[15] <= 1'b0;
 
 
-    # 10
-    @(posedge clk);
-    rst <= 0;
+  # 10
+  @(posedge clk);
+  rst <= 0;
 
   # 20
-    @(posedge clk);
+  @(posedge clk);
 
   wSelecOrigin[0] <= 1'b1;
   wSelecOrigin[1] <= 1'b1;
@@ -175,8 +175,8 @@ module data_selector_tb;
   wSelecOrigin[3] <= 1'b1;
 
   # 20
-    @(posedge clk);
-    {wRegs7} <= 32'h23456789;
+  @(posedge clk);
+  {wRegs7} <= 32'h23456789;
   wData <= 64'hcacb_4567_89ab_cdef;
 
   wSelecOrigin[0] <= 1'b0;
@@ -207,8 +207,6 @@ module data_selector_tb;
   wSelecRegs[13] <= 6'd61;
   wSelecRegs[14] <= 6'd62;
   wSelecRegs[15] <= 6'd63;
-
-
 
     # 300 $finish;
   end
