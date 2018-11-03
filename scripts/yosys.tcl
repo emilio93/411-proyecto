@@ -37,9 +37,6 @@ show -prefix $pdfOut$vlogModuleName-memory_opt -colors 3 -viewer echo $vlogModul
 techmap
 show -prefix $pdfOut$vlogModuleName-techmap -colors 3 -viewer echo $vlogModuleName
 
-log -n "Flip-flop count: "
-select -count t:\$_DFF_*
-
 opt
 show -prefix $pdfOut$vlogModuleName-techmap_opt -colors 3 -viewer echo $vlogModuleName
 

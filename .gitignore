@@ -3,4 +3,4 @@
 logs
 build
 pdfs
-.log
+*.log
