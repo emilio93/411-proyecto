@@ -310,7 +310,7 @@ package:
 #   Muestra instrucciones de uso del makefile.
 # USO:
 #   make help
-help: helpMain helpAll helpSynth helpCompile helpRun helpView helpClean
+help: helpMain helpAll helpSynth helpCompile helpRun helpView helpClean helpPackage
 
 helpMain:
 	@echo "*****************"
@@ -327,7 +327,7 @@ helpMain:
 	@echo "	make view prueba1 prueba2"
 	@echo "	make clean"
 	@echo ""
-	@echo "REGLAS DISPONIBLES: all, synth, compile, run, view, clean, help"
+	@echo "REGLAS DISPONIBLES: all, synth, compile, run, view, clean, help, package"
 	@echo ""
 	@echo "MODULOS DISPONIBLES:"
 	@$(foreach vlog, $(wildcard $(RTL_SRC)*.v), echo "	$(subst .v,,$(notdir $(vlog)))";)
@@ -422,4 +422,13 @@ helpClean:
 	@echo "	para modulos y pruebas."
 	@echo "USO:"
 	@echo "	make clean"
+	@echo ""
+helpPackage:
+	@echo "\n\n******************************************************************************"
+	@echo "PACKAGE"
+	@echo "******************************************************************************"
+	@echo "DESCRIPCION:"
+	@echo "	Crea un archivo zip con todo el contenido del proyecto."
+	@echo "USO:"
+	@echo "	make package"
 	@echo ""
