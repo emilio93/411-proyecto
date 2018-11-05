@@ -14,3 +14,9 @@
     // `include "lib/osu035_stdcells.v"
   `endif
 `endif
+
+`define assert(condition) \ // immediate assertions
+  if(!(condition)) begin \
+    $error("Assertion failed."); \
+    $finish(1); \
+  end

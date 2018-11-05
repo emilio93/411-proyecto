@@ -45,28 +45,29 @@ module adapter_4_to_1_tb;
 `endif
 
   initial begin
-
     r0 <= 16'h0123;
     r1 <= 16'h4567;
     r2 <= 16'h89AB;
     r3 <= 16'hCDEF;
-
     # 10
+	`assert (r == rSynth);
 
     r0 <= 16'hCDEF;
     r1 <= 16'h89AB;
     r2 <= 16'h4567;
     r3 <= 16'h0123;
-
     # 10
-
+	`assert (r == rSynth);
 
     r0 <= 16'hAAAA;
     r1 <= 16'h0AAA;
     r2 <= 16'h00BB;
     r3 <= 16'h0123;
+    # 10
+	`assert (r == rSynth);
 
-    # 10 $finish;
+	$display("INFO: Logical equivalence checked for %m.");
+	$finish;
   end
 
 endmodule

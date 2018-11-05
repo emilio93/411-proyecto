@@ -52,6 +52,7 @@ module data_selector_tb;
   assign wSelec[175:165] = {wSelecRegs[15], wSelecMain[15], wSelecOrigin[15]};
 
   always #1 clk = ~clk;
+  always @(negedge clk) begin `assert(data_out == data_outSynth); end
 
   data_selector #(
   DATA_WIDTH,
@@ -208,7 +209,9 @@ module data_selector_tb;
   wSelecRegs[14] <= 6'd62;
   wSelecRegs[15] <= 6'd63;
 
-    # 300 $finish;
+  # 300
+  $display("INFO: Logical equivalence checked for %m.");
+  $finish;
   end
 
 endmodule

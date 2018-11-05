@@ -1,6 +1,11 @@
 `timescale 1ns/1ps
 
 `include "rtl/input_selector_block.v"
+`include "testbench/includes.v"
+
+`ifdef SYNTH
+  `include "build/input_selector_block-sintetizado.v"
+`endif
 
 module input_selector_block_tb;
   initial begin
@@ -25,6 +30,7 @@ module input_selector_block_tb;
   reg [5:0] wSelecRegs [15:0];
   wire [175:0] wSelec;
   wire [15:0] r0, r1, r2, r3;
+  wire [15:0] r0Synth, r1Synth, r2Synth, r3Synth;
 
   wire [63:0] wSelecMainFlat;
 
@@ -58,6 +64,25 @@ module input_selector_block_tb;
     .r2(r2),
     .r3(r3)
   );
+
+  `ifdef SYNTH
+    input_selector_blockSynth #(
+      DATA_WIDTH,
+      MAIN_INPUTS,
+      REGS_INPUTS,
+      OUTPUTS,
+      OUTPUTS_PER_BUS
+    ) input_selector_blockSynth (
+      .wBusy(wBusy),
+      .wSelec(wSelec),
+      .wData(wData),
+      .wRegs(wRegs),
+      .r0(r0Synth),
+      .r1(r1Synth),
+      .r2(r2Synth),
+      .r3(r3Synth)
+    );
+  `endif
 
   initial begin
 
@@ -101,7 +126,10 @@ module input_selector_block_tb;
     wSelecRegs[14] <= 6'h24;
     wSelecRegs[15] <= 6'h29;
 
-    # 10 $finish;
+    # 10
+	`assert({r0,r1,r2,r3} == {r0Synth,r1Synth,r2Synth,r3Synth});
+	$display("INFO: Logical equivalence checked for %m.");
+	$finish;
   end
 
 endmodule

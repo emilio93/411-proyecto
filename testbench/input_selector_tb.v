@@ -1,6 +1,10 @@
 `timescale 1ns/1ps
 
 `include "rtl/input_selector.v"
+`include "testbench/includes.v"
+`ifdef SYNTH
+  `include "build/input_selector-sintetizado.v"
+`endif
 
 module input_selector_tb;
   initial begin
@@ -15,7 +19,7 @@ module input_selector_tb;
   reg [255:0] wDataRegs;
   reg [3:0] wSelecMain;
   reg [5:0] wSelecRegs;
-  wire [3:0] r;
+  wire [3:0] r, rSynth;
 
   input_selector input_selector1 (
     .wBusy(wBusy),
@@ -25,6 +29,16 @@ module input_selector_tb;
     .wSelecMain(wSelecMain),
     .wSelecRegs(wSelecRegs),
     .r(r)
+  );
+
+  input_selectorSynth input_selectorSynth (
+    .wBusy(wBusy),
+    .wSelecOrigin(wSelecOrigin),
+    .wData(wData),
+    .wDataRegs(wDataRegs),
+    .wSelecMain(wSelecMain),
+    .wSelecRegs(wSelecRegs),
+    .r(rSynth)
   );
 
   initial begin
@@ -38,32 +52,43 @@ module input_selector_tb;
     wSelecOrigin <= 0;
     wSelecMain <= 0;
     wSelecRegs <= 0;
-
     # 10
-    wSelecOrigin <= 1;
+	`assert(r == rSynth);
 
+	wSelecOrigin <= 1;
     # 10
-    wBusy <= 1;
+	`assert(r == rSynth);
 
+	wBusy <= 1;
     # 10
+	`assert(r == rSynth);
+
     wSelecMain <= 1;
-
     # 10
+	`assert(r == rSynth);
+
     wSelecRegs <= 4;
-
     # 10
+	`assert(r == rSynth);
+
     wBusy <= 0;
-
     # 10
+	`assert(r == rSynth);
+
     wSelecRegs <= $urandom%63;
-
     # 10
+	`assert(r == rSynth);
+
     wSelecMain <= 10;
-
     # 10
-    wSelecOrigin <= 0;
+	`assert(r == rSynth);
 
-    # 100 $finish;
+    wSelecOrigin <= 0;
+    # 100
+	`assert(r == rSynth);
+	$display("INFO: Logical equivalence checked for %m.");
+
+	$finish;
   end
 
 endmodule
