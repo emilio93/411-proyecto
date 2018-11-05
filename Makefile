@@ -34,6 +34,8 @@ NO_ERROR  = 2> /dev/null
 
 # crea folders necesarios en caso que no existan
 MAKE_FOLDERS := $(shell mkdir -p $(DIRS))
+# nombre de los archivos comprimidos
+PACKAGE = proyecto411
 
 .PHONY: 	compile run synth view
 
@@ -290,6 +292,16 @@ clean:
 	rm -r ./tests
 	rm -f ./*.dot
 	rm -f ./*yosys*.log
+
+# ******************************************************************************
+# PACKAGE
+# ******************************************************************************
+# DESCRIPCION:
+#   Crea un archivo zip con todo el contenido del proyecto.
+# USO:
+#   make package
+package:
+	zip -r $(PACKAGE).zip ./ -x *$(PACKAGE)*
 
 # ******************************************************************************
 # HELP
