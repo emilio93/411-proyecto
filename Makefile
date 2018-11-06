@@ -301,7 +301,7 @@ clean:
 # USO:
 #   make package
 package:
-	zip -r $(PACKAGE).zip ./ -x *$(PACKAGE)*
+	zip -r $(PACKAGE).zip ./ -x *$(PACKAGE)* -x *.git*
 
 # ******************************************************************************
 # HELP
