@@ -53,3 +53,11 @@ gtkwave gtkw/scheduler_tb.gtkw
  * rtl : codigo verilog que implementa el diseño planteado.
  * scripts : scripts utilizados en el flujo del proyecto.
  * testbench : módulos de prueba para el diseño implementado.
+
+## VCD to Tikz
+
+```bash
+cd scripts
+go build -o vcd_to_tikz
+./vcd_to_tikz
+```
