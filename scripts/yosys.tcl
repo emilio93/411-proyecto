@@ -56,4 +56,5 @@ flatten
 insbuf -buf BUFX2 A Y
 
 show -prefix $pdfOut$vlogModuleName-synth -lib $libSrc$cellLib.v -viewer echo -colors 3 -viewer echo $vlogModuleName
-write_verilog $synthOut$vlogModuleName$synthSuffix.v
+
+write_verilog -attr2comment $synthOut$vlogModuleName$synthSuffix.v
