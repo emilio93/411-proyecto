@@ -1,7 +1,7 @@
 # Proyecto IE411: Entrega Final
 
-# comprobar que ejecutables necesarios para correr make
-# se encuentren en $PATH
+## comprobar que ejecutables necesarios para correr make
+## se encuentren en $PATH
 + which sh
 + which bash
 + which iverilog
@@ -11,28 +11,28 @@
 + which magic
 + which qflow
 
-# Para seleccionar tecnologia:
+## Para seleccionar tecnologia:
 + make tech
 
-# Para ejecutar todas las etapas de Qflow:
+## Para ejecutar todas las etapas de Qflow:
 + make
 
-# Para sintetizar con Yosys:
+## Para sintetizar con Yosys:
 + make synth
 
-# Para Placement:
+## Para Placement:
 + make place
 
-# Para ejecutar análisis temporal estatico:
+## Para ejecutar análisis temporal estatico:
 + make sta
 
-# Para Routing:
+## Para Routing:
 + make route
 
-# Para eliminar archivos temporales:
+## Para eliminar archivos temporales:
 + make clean
 
-# Archivo con resultados de anális temporal:
+## Archivo con resultados de anális temporal:
 + sta_data.txt
 - Se genera despúes de correr: make sta
 
