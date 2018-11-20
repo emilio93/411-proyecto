@@ -1,6 +1,6 @@
 #!/usr/bin/tcsh -f
 #------------------------------------------------------------
-# project variables for project /home/du/Files_du/UCR/II_18/MicroE/PROYECTO/QFLOW
+# project variables for project /home/du/Files_du/UCR/II_18/MicroE/PROYECTO/411-proyecto/Qflow
 #------------------------------------------------------------
 
 # Synthesis command options:
