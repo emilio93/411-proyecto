@@ -1,0 +1,21 @@
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu018 from existing qflow_vars.sh file
+Regenerating files for existing project data_selector
+No actions specified on command line;
+creating qflow script file /home/du/Files_du/UCR/II_18/MicroE/PROYECTO/411-proyecto/Qflow/qflow_exec.sh only.
+Uncomment lines in this file and source the file to run the flow.
+Running blif2cel.tcl
+Running decongest to set initial density of 0.8
+Reading FILL macros from LEF file.
+
+decongest.tcl:
+Fixed density planning, density = 0.8
+Number of cells = 9171, total width = 3066240
+Width of fill = 80, total fill cells added = 9582
+
+Done!
+First attempt routing succeeded;  final placement iteration is unnecessary.

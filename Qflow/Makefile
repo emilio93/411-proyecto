@@ -81,8 +81,8 @@ sta:
 route:
 		qflow route $(top-module_name)
 
-#decongest:
-		#qflow decongest $(top-module_name)
+decongest:
+		qflow decongest $(top-module_name) > decongest.log
 
 #display:
 		#qflow display $(top-module_name)
