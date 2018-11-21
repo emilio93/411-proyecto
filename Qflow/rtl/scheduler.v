@@ -2,7 +2,7 @@
 `define scheduler_module
 
 /**
- *  Bloque scheduler
+ *  Bloque scheduler:
  *
  *  El bloque scheduler arbitra según el algoritmo round robin N_INPUTS entradas
  *  de tamaño DATA_WIDTH cada uno. Para iniciar el arbitro se utiliza una señal
