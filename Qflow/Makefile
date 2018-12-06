@@ -1,6 +1,7 @@
-#TECH_name: nombre de la libreria 
+#TECH_name: nombre de la libreria
 TECH_name_18 = osu018
 TECH_name_35 = osu035
+DIRS = source layout synthesis
 
 #Nombre del top-module del RTL, para sintetizar.
 top-module_name = data_selector
@@ -15,8 +16,20 @@ OPT = -T
 #	para el top-module del RTL.
 # USO:
 #   make all
-all:	tech synth place sta
+all: pre tech synth place sta
 
+# ******************************************************************************
+# ALL
+# ******************************************************************************
+# DESCRIPCION:
+#	Instrucciones previas a la síntesis
+# USO:
+#   make pre
+pre:
+	@mkdir -p $(DIRS)
+	@cp ../rtl/* ./source
+	@(cd source && ln -s ./ rtl)
+	
 # ******************************************************************************
 # TECH
 # ******************************************************************************
@@ -30,8 +43,7 @@ all:	tech synth place sta
 #   make tech
 tech:
 		qflow $(OPT) $(TECH_name_18) $(top-module_name)
-		echo >> project_vars.sh "set initial_density = 0.8" 
-		
+
 # ******************************************************************************
 # SYNTH
 # ******************************************************************************
@@ -106,10 +118,6 @@ clean:
 #	Elimina TODOS los archivos, tanto temporales como de salida, de cada etapa
 #	de Qflow.
 # USO:
-#   make clear	
-clear:
-		rm -rf source/*.ys *.blif
-		rm -rf layout/*
-		rm -rf synthesis/*
-		rm -rf *.log
-		
+#   make CLEAN
+CLEAN:
+		@rm -rf ./source layout synthesis *.log *.txt qflow_*.sh
